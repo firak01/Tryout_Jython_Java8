@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>JAZxJython_Python2</name>
+	<name>Tryout_Jython_Java8</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -24,13 +24,17 @@
 		<link>
 			<name>README.md</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/README.md</locationURI>
+			<locationURI>copy_PARENT1/README.md</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
 			<name>copy_PARENT</name>
 			<value>$%7BPARENT-3-PROJECT_LOC%7D/repo/EclipseOxygen_V02/Project_JAZxJython</value>
+		</variable>
+		<variable>
+			<name>copy_PARENT1</name>
+			<value>$%7BPARENT-1-copy_PARENT%7D/Project_Tryout_Jython_Java8</value>
 		</variable>
 	</variableList>
 </projectDescription>
