@@ -1,0 +1,17 @@
+/bin/
+/target/
+
+### wir haben hier zwar ein Java - Projekt, aber die .gitignore Einstellungen eines pyDev - Projekts nehme ich mit.... sicher ist sicher.
+# Jython cache
+**/.jython_cache/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Eclipse workspace metadata
+.metadata/
+
+# Operating system
+Thumbs.db
+.DS_Store
