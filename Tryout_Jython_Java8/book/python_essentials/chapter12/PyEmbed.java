@@ -12,7 +12,8 @@ import org.python.util.*;
  * 
  * Sinn des - von mir erweiteten - Beispiels ist
  * a) Man kann ein Python Script aufrufen
- *    Parameter übergeben und Ergebnisse empfangen (Meine Erweiterung)
+ *    Parameter übergeben und Ergebnisse empfangen (Meine Erweiterung).
+ *    Links ist ein Feld, in dem sogar im UI ein Zahlenwert eingetragen werden kann.
  *    
  * b) Man kann auch mit Objekten arbeiten (s. Buch Originalscript)
  *    Z.B.  this.interp.set("g", this.easel.getGraphics());
@@ -29,9 +30,10 @@ public class PyEmbed extends JFrame {
     String startFile;
     JTextField textFieldScript;
     JTextField textFieldCommand;
+    JTextField textFieldInput;
     JTextField textFieldResult;
     
-    public PyEmbed(String startupScriptPath, String startupCommand) {
+    public PyEmbed(String startupScriptPath, String startupScriptValue, String startupCommand) {
         this.startFile = startupScriptPath;
         this.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent evt) {
@@ -41,6 +43,11 @@ public class PyEmbed extends JFrame {
         this.easel = new JPanel();
         this.easel.setPreferredSize(new Dimension(200, 200));
         this.getContentPane().add(this.easel, BorderLayout.CENTER);
+        
+        //FGL: Das Wert-Eingabetextfeld
+        this.textFieldInput = new JTextField(startupScriptValue);
+        this.textFieldInput.setPreferredSize(new Dimension(20, 20));
+        this.getContentPane().add(this.textFieldInput, BorderLayout.WEST);
         
         //FGL: Das Ergebnistextfeld
         this.textFieldResult = new JTextField("");
@@ -84,8 +91,7 @@ public class PyEmbed extends JFrame {
             	System.out.println("Command action...: " + sAction);
             	
                 //Das führt nur eine einzelne Befehlszeilencommando in Python aus
-            	PyEmbed.this.interp.exec(sAction);
-            	            	            	
+            	PyEmbed.this.interp.exec(sAction);            	         	            
                 PyEmbed.this.textFieldResult.setText("Aktion ausgeführt.");
                 
                 //FGL: Hier nicht neu malen, das löscht z.B. die gezeichnete Linie
@@ -108,6 +114,7 @@ public class PyEmbed extends JFrame {
         //     aber in dem "geklauten" Beispiel fehlt basis_zahl.
         //     Vielleicht kann ich sie so übergeben? Ja, klappt. siehe embed.py
         this.interp.set("basis_zahl", 2);
+        this.interp.set("t", this.textFieldInput);
     }
     
     public void show() {
@@ -123,8 +130,9 @@ public class PyEmbed extends JFrame {
     	
     	//Es reicht aber wohl der relative Pfad, mit den Packages!
     	String sScript = "book\\python_essentials\\chapter12\\embed.py";
+    	String sStartupScriptValue = "8";
     	String sCommand = "g.drawLine(10,10,100,10)";
-        PyEmbed embed = new PyEmbed(sScript, sCommand);
+        PyEmbed embed = new PyEmbed(sScript, sStartupScriptValue, sCommand);
         embed.show();
     }
               
