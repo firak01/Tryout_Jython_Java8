@@ -24,7 +24,7 @@
 		<link>
 			<name>README.md</name>
 			<type>1</type>
-			<locationURI>copy_PARENT1/README.md</locationURI>
+			<locationURI>PARENT-1-PARENT_LOC/README.md</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
