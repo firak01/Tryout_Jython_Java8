@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="tryout"/>
 	<classpathentry kind="src" path="bookDefinitiveGuideToJython_c10a"/>
 	<classpathentry kind="src" path="bookDefinitiveGuideToJython_c10b"/>
+	<classpathentry kind="src" path="bookDefinitiveGuideToJython_c10c"/>
 	<classpathentry kind="src" path="bookJythonEssentials"/>
 	<classpathentry kind="lib" path="/ZKernelFileCollection/jython/jython-standalone-2.7.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
