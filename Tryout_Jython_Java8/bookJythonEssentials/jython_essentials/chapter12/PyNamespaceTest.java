@@ -1,4 +1,4 @@
-package python_essentials.chapter12;
+package jython_essentials.chapter12;
 
 import org.python.core.*;
 import org.python.util.*;

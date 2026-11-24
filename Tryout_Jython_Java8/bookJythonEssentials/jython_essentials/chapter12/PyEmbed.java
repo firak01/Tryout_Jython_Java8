@@ -1,4 +1,4 @@
-package python_essentials.chapter12;
+package jython_essentials.chapter12;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -126,10 +126,10 @@ public class PyEmbed extends JFrame {
     public static void main(String[] argv) {
    	
     	//Möglich, ein absoluter Pfad
-    	//String sScript = "C:\\1fgl\\repo\\EclipseOxygen_V02\\Project_JAZxJython_Python2\\JAZxJython_Python2\\book\\python_essentials\\chapter12\\embed.py";
+    	//String sScript = "C:\\1fgl\\repo\\EclipseOxygen_V02\\Project_JAZxJython_Python2\\JAZxJython_Python2\\bookJythonEssentials\\jython_essentials\\chapter12\\embed.py";
     	
     	//Es reicht aber wohl der relative Pfad, mit den Packages!
-    	String sScript = "book\\python_essentials\\chapter12\\embed.py";
+    	String sScript = "bookJythonEssentials\\jython_essentials\\chapter12\\embed.py";
     	String sStartupScriptValue = "8";
     	String sCommand = "g.drawLine(10,10,100,10)";
         PyEmbed embed = new PyEmbed(sScript, sStartupScriptValue, sCommand);

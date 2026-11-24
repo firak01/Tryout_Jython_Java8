@@ -1,4 +1,4 @@
-package python_essentials.chapter13;
+package jython_essentials.chapter13;
 
 import javax.swing.JButton;
 
